@@ -11,6 +11,9 @@ export class TestComponent implements OnInit {
 
   ngOnInit(): void {
     document.getElementById("bla");;;
-  }
 
+    // FALSE NEGATIVE:
+    // More than one semicolons
+    // https://eslint.org/docs/latest/rules/semi
+  }
 }
