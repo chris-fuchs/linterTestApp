@@ -1,19 +1,20 @@
 <div id="bla">
     <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png">
     <!--
-      FALSE POSITIVE:
+      FALSE NEGATIVE:
       Image has alt text
       https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin-template/docs/rules/accessibility-alt-text.md
      -->
 
      <input [name]="foo" [name]="bar">
-     <!-- FALSE POSITIVE:
+     <!--
+     FALSE NEGATIVE:
      No duplicate
      https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin-template/docs/rules/no-duplicate-attributes.md -->
 
     <button></button>
     <!--
-      FALSE POSITIVE:
+      FALSE NEGATIVE:
       Button has type
       https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin-template/docs/rules/button-has-type.md
     -->
@@ -25,9 +26,9 @@
   Lifecycle methods should not be empty -->
 
   <a [href]="$any(getHref())">Click here</a>'
-  <!-- FALSE POSITIVE
+  <!-- FALSE NEGATIVE
   No any
   https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin-template/docs/rules/no-any.md -->
-
 </div>
+
 

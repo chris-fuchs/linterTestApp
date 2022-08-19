@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class TestComponent implements OnInit {
 
   title=''
-  // FALSE POSITIVE:
+  // FALSE NEGATIVE:
   // only one semicolons (not 0 not more than 1)
   // https://eslint.org/docs/latest/rules/semi
 
