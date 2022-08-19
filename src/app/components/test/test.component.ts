@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class TestComponent implements OnInit {
 
   title=''
-  // FALSE NEGATIVE:
+  // FALSE POSITIVE:
   // only one semicolons (not 0 not more than 1)
   // https://eslint.org/docs/latest/rules/semi
 
@@ -17,5 +17,9 @@ export class TestComponent implements OnInit {
   ngOnInit(): void {
     // TRUE POSITIVE:
     // Lifecycle methods should not be empty
+  }
+
+  getHref(): String {
+    return "www.google.com";
   }
 }

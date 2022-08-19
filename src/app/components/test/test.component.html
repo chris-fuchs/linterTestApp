@@ -1,14 +1,14 @@
 <div id="bla">
     <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png">
     <!--
-      FALSE NEGATIVE:
+      FALSE POSITIVE:
       Image has alt text
-
+      https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin-template/docs/rules/accessibility-alt-text.md
      -->
 
     <button></button>
     <!--
-      FALSE NEGATIVE:
+      FALSE POSITIVE:
       Button has type
       https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin-template/docs/rules/button-has-type.md
     -->
@@ -18,5 +18,11 @@
   <!-- TRUE POSITIVE:
     Expected `===` but received `==`
   Lifecycle methods should not be empty -->
+
+  <a [href]="$any(getHref())">Click here</a>'
+  <!-- FALSE POSITIVE
+  No any
+  https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin-template/docs/rules/no-any.md -->
+
 </div>
 
