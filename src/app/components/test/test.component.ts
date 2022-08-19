@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-test',
@@ -8,6 +8,19 @@ import { Component, OnInit } from '@angular/core';
 export class TestComponent implements OnInit {
 
   title=''
+
+ foo : string[] = [
+    'apples',
+    'oranges',
+    'bananas'
+  ];
+
+  bar : string[] = [
+    'one',
+    'two',
+    'three'
+  ];
+
   // FALSE POSITIVE:
   // only one semicolons (not 0 not more than 1)
   // https://eslint.org/docs/latest/rules/semi
