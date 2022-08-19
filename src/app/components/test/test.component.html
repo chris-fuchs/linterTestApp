@@ -14,3 +14,9 @@
     -->
 </div>
 
+<div *ngIf="title==''">
+  <!-- TRUE POSITIVE:
+    Expected `===` but received `==`
+  Lifecycle methods should not be empty -->
+</div>
+

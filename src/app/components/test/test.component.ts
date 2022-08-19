@@ -7,13 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
+  title=''
+  // FALSE NEGATIVE:
+  // only one semicolons (not 0 not more than 1)
+  // https://eslint.org/docs/latest/rules/semi
+
   constructor() { }
 
   ngOnInit(): void {
-    document.getElementById("bla");;;
-
-    // FALSE NEGATIVE:
-    // More than one semicolons
-    // https://eslint.org/docs/latest/rules/semi
+    // TRUE POSITIVE:
+    // Lifecycle methods should not be empty
   }
 }
