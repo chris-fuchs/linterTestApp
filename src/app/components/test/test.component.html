@@ -10,16 +10,21 @@
      <!--
      FALSE NEGATIVE:
      No duplicate
+     // eslint-disable-next-line max-len
      https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin-template/docs/rules/no-duplicate-attributes.md -->
 
     <button></button>
     <!--
       FALSE NEGATIVE:
       Button has type
+      // eslint-disable-next-line max-len
       https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin-template/docs/rules/button-has-type.md
     -->
 </div>
 
+<!-- TODO: disable for next line in html, remove // and add html comment -->
+
+<!-- eslint-disable-next-line @angular-eslint/template/eqeqeq -->
 <div *ngIf="title==''">
   <!-- TRUE POSITIVE:
     Expected `===` but received `==`
@@ -28,6 +33,7 @@
   <a [href]="$any(getHref())">Click here</a>'
   <!-- FALSE NEGATIVE
   No any
+  // eslint-disable-next-line max-len
   https://github.com/angular-eslint/angular-eslint/blob/main/packages/eslint-plugin-template/docs/rules/no-any.md -->
 </div>
 

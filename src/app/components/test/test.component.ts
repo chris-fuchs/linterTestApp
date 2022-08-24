@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
+  // eslint-disable-next-line semi
   title=''
   // FALSE NEGATIVE:
   // only one semicolons (not 0 not more than 1)
@@ -27,6 +28,7 @@ export class TestComponent implements OnInit {
 
   constructor() { }
 
+  // eslint-disable-next-line @angular-eslint/no-empty-lifecycle-method
   ngOnInit(): void {
     // TRUE POSITIVE:
     // Lifecycle methods should not be empty

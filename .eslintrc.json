@@ -19,22 +19,26 @@
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "rules": {
-        // "@angular-eslint/directive-selector": [
-        //   "error",
-        //   {
-        //     "type": "attribute",
-        //     "prefix": "app",
-        //     "style": "camelCase"
-        //   }
-        // ],
-        // "@angular-eslint/component-selector": [
-        //   "error",
-        //   {
-        //     "type": "element",
-        //     "prefix": "app",
-        //     "style": "kebab-case"
-        //   }
-        // ]
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "app",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
+        ],
+        "semi": [
+          "error",
+          "always"
+        ]
       }
     },
     {
@@ -44,7 +48,10 @@
       "extends": [
         "plugin:@angular-eslint/template/recommended"
       ],
-      "rules": {}
+      "rules": {
+        "max-len": ["error", { "code": 800 }],
+        "@angular-eslint/template/no-duplicate-attributes": ["error"]
+      }
     }
   ]
 }
